@@ -24,7 +24,7 @@
       </v-toolbar-items>
     </v-app-bar>
 
-     <v-navigation-drawer v-model="drawer" absolute temporary app width="150" height="340">
+     <v-navigation-drawer v-model="drawer" relative temporary app width="150" height="340">
       <v-list class="pt-4">
 
         <v-list-item active-class="orange--text" to="/">

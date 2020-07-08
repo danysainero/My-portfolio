@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/back1.png"
   },
   {
-    "revision": "02b40dd6940ccc93d4dc",
+    "revision": "a02ebfc69b8711d5da51",
     "url": "/css/app.4dbd9860.css"
   },
   {
@@ -80,12 +80,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/tanks.jpg"
   },
   {
-    "revision": "119652acbeb32b85d96a094ef91e4681",
+    "revision": "e6d30cc030a4e9c2675adb5123e8ffba",
     "url": "/index.html"
   },
   {
-    "revision": "02b40dd6940ccc93d4dc",
-    "url": "/js/app.6596e1f2.js"
+    "revision": "a02ebfc69b8711d5da51",
+    "url": "/js/app.cb2a0f39.js"
   },
   {
     "revision": "bebe032f27f47c256f20",
