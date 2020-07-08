@@ -60,9 +60,9 @@
             color="orange"
             background-color="transparent"
             :counter="200"
-            v-model="formData.message"
-            label="Textarea"
-            name="message"
+            v-model="formData.body"
+            label="Message"
+            name="body"
           ></v-textarea>
           <p hidden>
             <label>
@@ -70,7 +70,7 @@
               <input name="bot-field" />
             </label>
           </p>
-          <v-btn @click="submit" type="submit" color="orange" class="white--text">SEND MESSAGE</v-btn>
+          <v-btn type="submit" color="orange" class="white--text">SEND</v-btn>
           <v-btn @click="clear">clear</v-btn>
         </form>
       </v-flex>
@@ -87,6 +87,7 @@ import {
   email,
   minLength
 } from "vuelidate/lib/validators";
+
 export default {
   mixins: [validationMixin],
   validations: {
@@ -99,7 +100,7 @@ export default {
       formData: {
         name: "",
         email: "",
-        message: ""
+        body: ""
       }
     };
   },
@@ -107,7 +108,7 @@ export default {
     clear() {
       this.formData.name = "";
       this.formData.email = "";
-      this.formData.message = "";
+      this.formData.body = "";
     },
     encode(data) {
       return Object.keys(data)
@@ -128,7 +129,7 @@ export default {
         .then(() => {
           this.formData.name = "";
           this.formData.email = "";
-          this.formData.message = "";
+          this.formData.body = "";
           this.$router.push("contact/success");
         })
         .catch(error => alert(error));
