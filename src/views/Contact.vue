@@ -44,10 +44,8 @@
             color="orange"
             background-color="transparent"
             v-model="formData.name"
-            :error-messages="nameErrors"
             label="Name"
             required
-            @blur="$v.name.$touch()"
           ></v-text-field>
           <v-text-field
             type="email"
@@ -55,20 +53,16 @@
             background-color="transparent"
             name="email"
             v-model="formData.email"
-            :error-messages="emailErrors"
             label="E-mail"
             required
-            @blur="$v.email.$touch()"
           ></v-text-field>
           <v-textarea
             color="orange"
             background-color="transparent"
             :counter="200"
-            :error-messages="bodyErrors"
             v-model="formData.message"
             label="Textarea"
             name="body"
-            @blur="$v.body.$touch()"
           ></v-textarea>
           <p hidden>
             <label>
@@ -81,7 +75,6 @@
             type="submit"
             color="orange"
             class="white--text"
-            :disabled=" (body.length<=10)"
           >SEND MESSAGE</v-btn>
           <v-btn @click="clear">clear</v-btn>
         </form>
@@ -107,9 +100,6 @@ export default {
   },
   data() {
     return {
-      name: "",
-      email: "",
-      body: "",
       formData: {}
     };
   },
@@ -119,9 +109,7 @@ export default {
     },
     clear() {
       this.$v.$reset();
-      this.formData.name = "";
-      this.formData.email = "";
-      this.formData.body = "";
+      this.formData.$reset();
     },
     encode(data) {
       return Object.keys(data)
@@ -143,7 +131,7 @@ export default {
         .catch(error => alert(error));
     }
   },
-  computed: {
+  /* computed: {
     nameErrors() {
       const errors = [];
       if (!this.$v.formData.name.$dirty) return errors;
@@ -169,7 +157,7 @@ export default {
       !this.$v.formData.message.required && errors.push("Text is required");
       return errors;
     }
-  }
+  } */
 };
 </script>
 
