@@ -11,7 +11,7 @@
                 <div class="caption font-weight-bold orange--text">07/2020</div>
               </v-flex>
               <v-flex class="pl-2">
-                <strong>Full Stack Web Development</strong>
+                <strong>Fullstack Web Development</strong>
                 <div class="caption mb-2">Kairos DS</div>
               </v-flex>
             </v-layout>
@@ -35,7 +35,7 @@
                 <div class="caption font-weight-bold orange--text">08/2019</div>
               </v-flex>
               <v-flex class="pl-2">
-                <strong>Bootcamp Full Stack MEAN</strong>
+                <strong>Bootcamp Fullstack MEAN</strong>
                 <div class="caption mb-2">Boream</div>
               </v-flex>
             </v-layout>

@@ -9,14 +9,14 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn @click="changeTheme" depressed small icon class="hidden-md-and-up">
-        <v-icon v-if="goDark==true">fas fa-sun</v-icon>
+        <v-icon v-if="goDark==true" >fas fa-sun</v-icon>
         <v-icon v-else>fas fa-moon</v-icon>
       </v-btn>
       <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn text to="/" active-class="orange--text headline">Home</v-btn>
-        <v-btn text to="/resume" active-class="orange--text headline">Resume</v-btn>
-        <v-btn text to="/portfolio" active-class="orange--text headline">Portfolio</v-btn>
-        <v-btn text to="/contact" active-class="orange--text headline">Contact</v-btn>
+        <v-btn text to="/" active-class="orange--text headline" class="mx-2">Home</v-btn>
+        <v-btn text to="/resume" active-class="orange--text headline" class="mx-2">Resume</v-btn>
+        <v-btn text to="/portfolio" active-class="orange--text headline" class="mx-2">Portfolio</v-btn>
+        <v-btn text to="/contact" active-class="orange--text headline" class="mx-2">Contact</v-btn>
         <v-btn @click="changeTheme" depressed small icon>
           <v-icon v-if="goDark==true">fas fa-sun</v-icon>
           <v-icon v-else>fas fa-moon</v-icon>
