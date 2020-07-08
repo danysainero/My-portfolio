@@ -89,8 +89,8 @@
           <v-timeline-item color="orange" small>
             <v-layout pt-3>
               <v-flex xs4>
-                <div class="caption font-weight-bold orange--text">AUG 2014 -</div>
-                <div class="caption font-weight-bold orange--text">APR 2016</div>
+                <div class="caption font-weight-bold orange--text">08/2017 -</div>
+                <div class="caption font-weight-bold orange--text">02/2018 </div>
               </v-flex>
               <v-flex class="pl-2">
                 <strong>Técnico soporte E-commerce</strong>

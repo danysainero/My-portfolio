@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.e0d2fb72c5e4d47fd40bc1fc30c278d4.js"
+  "/precache-manifest.0c486fa1757ef6436ed41ed0998ac60f.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "dany-portfolio"});

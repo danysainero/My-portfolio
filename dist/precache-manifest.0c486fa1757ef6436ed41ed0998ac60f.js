@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/back1.png"
   },
   {
-    "revision": "5894c0df4f9083c41ae9",
+    "revision": "ac654a9a6bb6682e6fcc",
     "url": "/css/app.4dbd9860.css"
   },
   {
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/css/chunk-1e4813d8.601d8c98.css"
   },
   {
-    "revision": "fd3cb17d88f419855d9d",
+    "revision": "bca0db1360d3fd05c581",
     "url": "/css/chunk-236e531a.82aa7bbf.css"
   },
   {
@@ -24,7 +24,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/css/chunk-35d1598b.2c126f21.css"
   },
   {
-    "revision": "c38a8b46bc838cd32e84",
+    "revision": "d31f3ad5f9346c320d6c",
     "url": "/css/chunk-46c5a732.add55191.css"
   },
   {
@@ -80,28 +80,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/tanks.jpg"
   },
   {
-    "revision": "7ecb43b26ca4dbc06bfbaf91ce2b27c3",
+    "revision": "9ebcaf4a15ac59e228f98859699941d2",
     "url": "/index.html"
   },
   {
-    "revision": "5894c0df4f9083c41ae9",
-    "url": "/js/app.1a327981.js"
+    "revision": "ac654a9a6bb6682e6fcc",
+    "url": "/js/app.0d071c3c.js"
   },
   {
     "revision": "bebe032f27f47c256f20",
     "url": "/js/chunk-1e4813d8.c81c4dd9.js"
   },
   {
-    "revision": "fd3cb17d88f419855d9d",
-    "url": "/js/chunk-236e531a.f6c6d41c.js"
+    "revision": "bca0db1360d3fd05c581",
+    "url": "/js/chunk-236e531a.8c8dd155.js"
   },
   {
     "revision": "9a088a0ffb7c9182a7a8",
     "url": "/js/chunk-35d1598b.75373b68.js"
   },
   {
-    "revision": "c38a8b46bc838cd32e84",
-    "url": "/js/chunk-46c5a732.c1a2804d.js"
+    "revision": "d31f3ad5f9346c320d6c",
+    "url": "/js/chunk-46c5a732.f25c44ca.js"
   },
   {
     "revision": "b786658f921fa5df9162",
