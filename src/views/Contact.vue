@@ -30,7 +30,8 @@
           <span>Hablamos?</span>
         </h2>
 
-        <form name="contact" method="POST" data-netlify="true">
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true">
+         
           <v-text-field
             name="name"
             color="orange"
@@ -62,6 +63,10 @@
             name="body"
             @blur="$v.body.$touch()"
           ></v-textarea>
+           <p class="hidden">
+    <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+  </p>
+  <v-text-field data-netlify-recaptcha="true"></v-text-field>
           <v-btn
             @click="submit"
             type="submit"
