@@ -31,19 +31,19 @@
         </h2>
 
         <form
-          netlify
-          netlify-honeypot="bot-field"
           name="ask-question"
           method="post"
+          v-on:submit.prevent="handleSubmit"
+          action="/success/"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
         >
-         <input type="hidden" name="ask-question" value="simple-form" />
+          <input type="hidden" name="form-name" value="ask-question" />
           <v-text-field
             name="name"
             color="orange"
             background-color="transparent"
-            v-model="name"
+            v-model="formData.name"
             :error-messages="nameErrors"
             label="Name"
             required
@@ -54,7 +54,7 @@
             color="orange"
             background-color="transparent"
             name="email"
-            v-model="email"
+            v-model="formData.email"
             :error-messages="emailErrors"
             label="E-mail"
             required
@@ -65,14 +65,14 @@
             background-color="transparent"
             :counter="200"
             :error-messages="bodyErrors"
-            v-model="body"
+            v-model="formData.message"
             label="Textarea"
             name="body"
             @blur="$v.body.$touch()"
           ></v-textarea>
-          <p class="hidden">
+          <p hidden>
             <label>
-              Don’t fill this out if you're human:
+              Don’t fill this out:
               <input name="bot-field" />
             </label>
           </p>
@@ -109,7 +109,8 @@ export default {
     return {
       name: "",
       email: "",
-      body: ""
+      body: "",
+      formData: {}
     };
   },
   methods: {
@@ -121,6 +122,25 @@ export default {
       this.name = "";
       this.email = "";
       this.body = "";
+    },
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+        )
+        .join("&");
+    },
+    handleSubmit(e) {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: this.encode({
+          "form-name": e.target.getAttribute("name"),
+          ...this.formData
+        })
+      })
+        .then(() => this.$router.push("/contact"))
+        .catch(error => alert(error));
     }
   },
   computed: {
