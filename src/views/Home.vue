@@ -1,7 +1,7 @@
 <template>
   <v-layout column justify-center align-center class="mt-12 pt-2">
     <VueCompareImage
-      class="hidden-md-and-down bg-white"
+      class="hidden-md-and-down"
       hover
       :style="{ minWidth: '1300px' }"
       :sliderLineWidth="sliderLine"
@@ -11,13 +11,14 @@
       :sliderPositionPercentage="sliderPosition"
     />
     <VueCompareImage
-      class="hidden-lg-and-up"
+     id="img-container"
+      class="hidden-lg-and-up my-12"
       hover
-      :style="{ maxWidth: '400px' }"
+      :style="{ maxWidth: '400px'}"
       :sliderLineWidth="sliderLine"
       :handleSize="hSize"
-      :leftImage="leftImage2"
-      :rightImage="rightImage2"
+          :leftImage="leftImage"
+      :rightImage="rightImage"
       :sliderPositionPercentage="sliderPosition"
     />
     <v-flex>
@@ -61,8 +62,6 @@ export default {
       text1: ["Front-End Developer", "Back-End Developer"],
       leftImage: "/front1.jpg",
       rightImage: "/back1.png",
-      leftImage2: "/front1.jpg",
-      rightImage2: "/back1.png",
       sliderLine: 0,
       hSize: 0,
       sliderPosition: 0.5
@@ -76,5 +75,6 @@ export default {
   line-height: 1.2;
   text-align: justify;
 }
+
 </style>
 

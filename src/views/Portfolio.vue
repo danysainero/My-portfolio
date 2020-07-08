@@ -18,19 +18,21 @@
                 max-width="100%"
                 lazy-src="img/spinner.gif"
               ></v-img>
-              <v-card-title primary-title class="justify-center">{{project.title}}</v-card-title>
+              <v-card-title primary-title >{{project.title}}</v-card-title>
             </v-card>
           </v-flex>
         </template>
         <v-card v-if="project.dialog" class="d-flex flex-column align-end">
           <v-img  max-width="95%" max-height="60vh" :src="project.cover" class=" mx-auto my-4"></v-img>
           <v-card-text>
-            <h3 class="headline my-4">
-              <span>Tools</span>
+            <h3 class="headline my-4 text-center">
+              <span class="text-sm-center text-md-center ">Tools</span>
             </h3>
-             <v-chip label v-for="(tech, index) in project.techs" :key="index" class="mx-1"  color="grey" text-color="white">{{tech}}</v-chip>
+            <div class="d-flex flex-wrap justify-center">
+             <v-chip label v-for="(tech, index) in project.techs" :key="index" class="mx-1 my-1"   color="grey" text-color="white">{{tech}}</v-chip>
+         </div>
           </v-card-text>
-          <v-card-actions class="mb-5">
+          <v-card-actions>
             <v-btn text large hover color="white" :href="project.git" target="_blank" class="orange mx-2">
               <v-icon right>fab fa-github</v-icon>GitHub
             </v-btn>

@@ -1,6 +1,6 @@
 <template>
-  <v-layout row justify-center align-center wrap class="mt-12 pt-2">
-    <v-flex xs12 sm12 md5 lg6 xl6 class="mt-4 pt-4">
+  <v-layout row justify-center align-center wrap class="mt-12 pa-8">
+    <v-flex xs12 sm12 md12 lg6 xl6 class="mt-4 pt-4">
       <h2>Formación</h2>
       <v-card-text class="py-0">
         <v-timeline align-top dense>
@@ -56,7 +56,7 @@
         </v-timeline>
       </v-card-text>
     </v-flex>
-    <v-flex xs12 sm12 md4 lg6 xl6 class="mt-4 pt-2">
+    <v-flex xs12 sm12 md12 lg6 xl6 class="mt-4 pt-2" >
       <h2>Experiencia</h2>
       <v-card-text class="py-0">
         <v-timeline align-top dense>
@@ -113,8 +113,8 @@
         </v-timeline>
       </v-card-text>
     </v-flex>
-    <v-layout row justify-center align-center wrap class="mt-4 pt-3">
-      <v-flex xs12 sm12 md3 lg3 xl12 class="mx-9 pt-9">
+    <v-layout row justify-center align-center wrap class="mt-2" style="width: 100%;">
+      <v-flex xs12 sm12 md12 lg3 xl4 class="mx-9 pt-9">
         <h2>
           <span>Frontend</span>
           <span class="orange--text">Skills</span>
@@ -131,7 +131,7 @@
         <v-progress-linear v-model="buffer5" :buffer-value="bufferValue" color="orange" height="16"></v-progress-linear>
       </v-flex>
 
-      <v-flex xs12 sm12 md3 lg3 xl12 class="mx-9 pt-9">
+      <v-flex xs12 sm12 md12 lg3 xl3 class="mx-9 pt-9">
         <h2>
           <span>Backend</span>
           <span class="orange--text">Skills</span>
@@ -153,7 +153,7 @@
         ></v-progress-linear>
       </v-flex>
 
-      <v-flex xs12 sm12 md3 lg3 xl12 class="mx-9 pt-9">
+      <v-flex xs12 sm12 md12 lg3 xl3 class="mx-9 pt-9">
         <h2>
           <span>Other</span>
           <span class="orange--text">Skills</span>
@@ -194,20 +194,19 @@
           height="16"
         ></v-progress-linear>
       </v-flex>
-
-      <div class="my-16 pt-2">
-        <v-btn
-          href="https://drive.google.com/file/d/1Wzmzm2-hic7LuLIgzdmqMJioCXL8-XqR/view?usp=sharing"
-          target="_blank"
-          dark
-          large
-          class="btn-download"
-        >
-          Download Resume
-          <v-icon right dark>fas fa-file-download</v-icon>
-        </v-btn>
-      </div>
     </v-layout>
+    <div class="my-16 pt-2">
+      <v-btn
+        href="https://drive.google.com/file/d/1Wzmzm2-hic7LuLIgzdmqMJioCXL8-XqR/view?usp=sharing"
+        target="_blank"
+        dark
+        large
+        class="btn-download"
+      >
+        Download Resume
+        <v-icon right dark>fas fa-file-download</v-icon>
+      </v-btn>
+    </div>
   </v-layout>
 </template>
 
