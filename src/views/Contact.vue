@@ -30,7 +30,7 @@
           <span>Hablamos?</span>
         </h2>
 
-        <form method="POST" action="https://formspree.io/xayppbvn">
+        <form name="contact" method="POST" data-netlify="true">
           <v-text-field
             name="name"
             color="orange"

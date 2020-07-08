@@ -62,7 +62,7 @@ export default {
         {
           dialog: false,
           title: "My Portfolio",
-          cover: "img/myportfolio.png",
+          cover: "img/myportfolio.jpg",
           git: "https://github.com/danysainero/My-portfolio",
           techs: {
             tech1: "VUE",
@@ -73,8 +73,21 @@ export default {
         },
         {
           dialog: false,
+          title: "Face Recognition",
+          cover: "img/faces.jpg",
+          git: "https://github.com/danysainero/Face-recognition",
+          techs: {
+            tech1: "JavaScript",
+            tech2: "Azure",
+            tech3: "HTML",
+            tech4: "Cognitive Services",
+            tech5: "Jquery"
+          }
+        },
+        {
+          dialog: false,
           title: "Clon Netflix",
-          cover: "img/Netflix-Clon.png",
+          cover: "img/Netflix-Clon.jpg",
           git: "https://github.com/danysainero/Netflix-Angular",
           techs: {
             tech1: "Angular",
@@ -86,7 +99,7 @@ export default {
         {
           dialog: false,
           title: "Spotify Player",
-          cover: "img/spotify-clon.png",
+          cover: "img/spotify-clon.jpg",
           git: "https://github.com/danysainero/Spotify-Clon-Player",
           techs: {
             tech1: "JavaScript",
@@ -99,7 +112,7 @@ export default {
        {
           dialog: false,
           title: "Blog Components",
-          cover: "img/blog-components.png",
+          cover: "img/blog-components.jpg",
           git: "https://github.com/danysainero/blog-stenciljs-components",
           techs: {
             tech1: "StencilJs",
@@ -109,7 +122,7 @@ export default {
         },{
           dialog: false,
           title: "Blog Frontend",
-          cover: "img/blog.png",
+          cover: "img/blog.jpg",
           git: "https://github.com/danysainero/blog-front",
           techs: {
             tech1: "Angular 9",
@@ -122,7 +135,7 @@ export default {
         },{
           dialog: false,
           title: "Blog Backend",
-          cover: "img/blog-back.png",
+          cover: "img/blog-back.jpg",
           git: "https://github.com/danysainero/blog-back",
           techs: {
             tech1: "Node",
@@ -136,7 +149,7 @@ export default {
         {
           dialog: false,
           title: "AI-tanks Hackaton test",
-          cover: "img/tanks.png",
+          cover: "img/tanks.jpg",
           git: "https://github.com/danysainero/AI-tanks-Javascript",
           techs: {
             tech1: "JavaScript",
@@ -148,7 +161,7 @@ export default {
         {
           dialog: false,
           title: "Contacts Book",
-          cover: "img/contacts.png",
+          cover: "img/contacts.jpg",
           git: "https://github.com/danysainero/agenda-contactos_reto_individual",
           techs: {
             tech1: "JavaScript",
