@@ -2,25 +2,25 @@
   <v-container grid-list-xl class="mt-12">
     <v-layout row justify-center align-center wrap class="mt-8">
       <v-flex xs12 sm12 md6 lg6 xl6>
-        <h2 class=" pb-8">
+        <h2 class="pb-8">
           <span>Contacto</span>
         </h2>
         <div class="py-4 font-weight-bold">
           <v-icon large color="orange" left class="mr-2">fas fa-map-marker-alt</v-icon>
-          <span> Madrid, España</span>
+          <span>Madrid, España</span>
         </div>
-        <div class="py-4  font-weight-bold">
+        <div class="py-4 font-weight-bold">
           <v-icon large color="orange" left>fa fa-at</v-icon>
           <span>danysainero@gmail.com</span>
         </div>
-        <div class="py-4  font-weight-bold">
+        <div class="py-4 font-weight-bold">
           <v-icon large color="orange" left>fas fa-phone</v-icon>
           <span>+34 603 77 03 34</span>
         </div>
-        <div class="py-4  font-weight-bold">
+        <div class="py-4 font-weight-bold">
           <v-icon large color="orange" left>fa fa-user-circle</v-icon>
           <a class="secondary--text" href="http://www.linkedin.com/in/dany-sain" target="_blank">
-          <span class="text-lowercase">www.linkedin.com/in/dany-sain</span>
+            <span class="text-lowercase">www.linkedin.com/in/dany-sain</span>
           </a>
         </div>
       </v-flex>
@@ -30,8 +30,14 @@
           <span>Hablamos?</span>
         </h2>
 
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true">
-         
+        <form
+          netlify
+          netlify-honeypot="bot-field"
+          name="ask-question"
+          method="post"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
           <v-text-field
             name="name"
             color="orange"
@@ -63,10 +69,12 @@
             name="body"
             @blur="$v.body.$touch()"
           ></v-textarea>
-           <p class="hidden">
-    <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-  </p>
-  <v-text-field data-netlify-recaptcha="true"></v-text-field>
+          <p class="hidden">
+            <label>
+              Don’t fill this out if you're human:
+              <input name="bot-field" />
+            </label>
+          </p>
           <v-btn
             @click="submit"
             type="submit"
@@ -118,7 +126,7 @@ export default {
     nameErrors() {
       const errors = [];
       if (!this.$v.name.$dirty) return errors;
-       !this.$v.name.minLength &&
+      !this.$v.name.minLength &&
         errors.push("Text must be at least 3 characters long");
       !this.$v.name.maxLength &&
         errors.push("Name must be at most 3 characters long");
@@ -145,5 +153,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 </style>
