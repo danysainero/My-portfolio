@@ -17,7 +17,7 @@
           <v-btn
             color="orange darken-1"
             text
-            @click="dialog = false"
+            @click="returnTo"
           >
             Ok!
           </v-btn>
@@ -34,5 +34,11 @@
         dialog: true,
       }
     },
+    methods: {
+      returnTo(){
+        this.dialog = false;
+        this.$router.push("/contact");
+      }
+    }
   }
 </script>

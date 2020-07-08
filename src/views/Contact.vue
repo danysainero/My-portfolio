@@ -1,7 +1,5 @@
 <template>
-
   <v-container grid-list-xl class="mt-12">
-    
     <v-layout row justify-center align-center wrap class="mt-8">
       <v-flex xs12 sm12 md6 lg6 xl6>
         <h2 class="pb-8">
@@ -64,7 +62,7 @@
             :counter="200"
             v-model="formData.message"
             label="Textarea"
-            name="body"
+            name="message"
           ></v-textarea>
           <p hidden>
             <label>
@@ -72,12 +70,7 @@
               <input name="bot-field" />
             </label>
           </p>
-          <v-btn
-            @click="submit"
-            type="submit"
-            color="orange"
-            class="white--text"
-          >SEND MESSAGE</v-btn>
+          <v-btn @click="submit" type="submit" color="orange" class="white--text">SEND MESSAGE</v-btn>
           <v-btn @click="clear">clear</v-btn>
         </form>
       </v-flex>
@@ -103,13 +96,18 @@ export default {
   },
   data() {
     return {
-      formData: {}
+      formData: {
+        name: "",
+        email: "",
+        message: ""
+      }
     };
   },
   methods: {
     clear() {
-      this.$v.$reset();
-      this.formData.$reset();
+      this.formData.name = "";
+      this.formData.email = "";
+      this.formData.message = "";
     },
     encode(data) {
       return Object.keys(data)
@@ -127,7 +125,12 @@ export default {
           ...this.formData
         })
       })
-        .then(() => this.$router.push("contact/success"))
+        .then(() => {
+          this.formData.name = "";
+          this.formData.email = "";
+          this.formData.message = "";
+          this.$router.push("contact/success");
+        })
         .catch(error => alert(error));
     }
   }
