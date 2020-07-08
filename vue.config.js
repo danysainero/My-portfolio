@@ -1,21 +1,22 @@
+
+
 module.exports = {
   "transpileDependencies": [
     "vuetify"
   ],
-  configureWebpack: () => {
-    if (process.env.NODE_ENV !== 'production') return;
-    return {
-      plugins: [
-        new PrerenderSPAPlugin(
-          // Absolute path to compiled SPA
-          path.resolve(__dirname, 'dist'),
-          // List of routes to prerender
-          [ '/'],
-          {
-            // options
-          }
-        ),
-      ]
+  pluginOptions: {
+    prerenderSpa: {
+      registry: undefined,
+      renderRoutes: [
+        '/contact'
+      ],
+      useRenderEvent: true,
+      onlyProduction: true,
+      headless: false, // <- this could also be inside the customRendererConfig
+      customRendererConfig:
+      {
+        args: ["--auto-open-devtools-for-tabs"]
+      }
     }
   }
 }
