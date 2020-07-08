@@ -1,5 +1,7 @@
 <template>
+
   <v-container grid-list-xl class="mt-12">
+    
     <v-layout row justify-center align-center wrap class="mt-8">
       <v-flex xs12 sm12 md6 lg6 xl6>
         <h2 class="pb-8">
@@ -80,6 +82,7 @@
         </form>
       </v-flex>
     </v-layout>
+    <router-view></router-view>
   </v-container>
 </template>
 
@@ -127,7 +130,7 @@ export default {
           ...this.formData
         })
       })
-        .then(() => this.$router.push("/contact"))
+        .then(() => this.$router.push("/success"))
         .catch(error => alert(error));
     }
   },

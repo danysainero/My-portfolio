@@ -18,13 +18,17 @@ Vue.use(VueRouter)
   {
     path: '/contact',
     name: 'contact',
-    component: () => import('../views/Contact.vue')
+    component: () => import('../views/Contact.vue'),
+    children: [
+      { path: 'success', component: () => import('../components/contact-success.vue')},
+    ]
   },
   {
     path: '/portfolio',
     name: 'portfolio',
     component: () => import('../views/Portfolio.vue')
   },
+  
 ]
 
 const router = new VueRouter({
