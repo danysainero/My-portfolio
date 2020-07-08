@@ -107,9 +107,6 @@ export default {
     };
   },
   methods: {
-    submit() {
-      this.$v.$touch();
-    },
     clear() {
       this.$v.$reset();
       this.formData.$reset();
@@ -133,34 +130,7 @@ export default {
         .then(() => this.$router.push("contact/success"))
         .catch(error => alert(error));
     }
-  },
-  /* computed: {
-    nameErrors() {
-      const errors = [];
-      if (!this.$v.formData.name.$dirty) return errors;
-      !this.$v.formData.name.minLength &&
-        errors.push("Text must be at least 3 characters long");
-      !this.$v.formData.name.maxLength &&
-        errors.push("Name must be at most 3 characters long");
-      !this.$v.formData.name.required && errors.push("Name is required.");
-      return errors;
-    },
-    emailErrors() {
-      const errors = [];
-      if (!this.$v.formData.email.$dirty) return errors;
-      !this.$v.formData.email.email && errors.push("Must be valid e-mail");
-      !this.$v.formData.email.required && errors.push("E-mail is required");
-      return errors;
-    },
-    bodyErrors() {
-      const errors = [];
-      if (!this.$v.formData.message.$dirty) return errors;
-      !this.$v.formData.message.minLength &&
-        errors.push("Text must be at least 10 characters long");
-      !this.$v.formData.message.required && errors.push("Text is required");
-      return errors;
-    }
-  } */
+  }
 };
 </script>
 
