@@ -130,7 +130,7 @@ export default {
           ...this.formData
         })
       })
-        .then(() => this.$router.push("/success"))
+        .then(() => this.$router.push("contact/success"))
         .catch(error => alert(error));
     }
   },
